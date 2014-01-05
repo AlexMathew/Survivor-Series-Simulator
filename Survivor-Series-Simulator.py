@@ -1,5 +1,5 @@
-######################### import this whole section as a separate module ##########################
-# Should I import this as a separate module ? This makes it easier, but the file gets a little long
+##############################################################
+
 
 ###
 # WRESTLER DETAILS
@@ -431,7 +431,7 @@ maxlimit = 43.5
 final_save_location = ""
 
 
-######################### import this whole section as a separate module ##########################
+####################################################################
 
 from Tkinter import *
 import random
@@ -440,8 +440,6 @@ from hashlib import md5
 
 ####################################
 
-# TO DO -
-#	* Assign the random number based logic for success of a move, and corresponding damage
 
 class SurvivorSeriesGame(object):
 
@@ -457,7 +455,7 @@ class SurvivorSeriesGame(object):
 			> Who should continue the match after an elimination
 		* Functions to perform each type of move
 			> The subclass has a move_perform() method that uses getattr() to select which function to use
-			> Possible functions :  ########## Check if there are any more
+			> Possible functions :
 				# do_matchstart()
 				# do_basic()
 				# do_grapple()
@@ -520,17 +518,6 @@ class SurvivorSeriesGame(object):
 				filename += wrestler[3] + "_"
 			if team_no == 0:
 				filename += "_vs__"
-
-#		random_list = ""
-#
-#		letters = ['A', 'a', 'B', 'b', 'C', 'c', 'D', 'd', 'E', 'e', 'F', 'f', 'G', 'g', \
-#				   'H', 'h', 'I', 'i', 'J', 'j', 'K', 'k', 'L', 'l', 'M', 'm', 'N', 'n', \
-#				   'O', 'o', 'P', 'p', 'Q', 'q', 'R', 'r', 'S', 's', 'T', 't', 'U', 'u', \
-#				   'V', 'v', 'W', 'w', 'X', 'x', 'Y', 'y', 'Z', 'z']
-#
-#		for i in xrange(8):
-#			random.shuffle(letters)
-#			random_list += letters[0]
 
 		final_save_location += filename
 
@@ -1002,13 +989,10 @@ class MatchRun(Frame, SurvivorSeriesGame):
 		Frame.__init__(self, master)
 		self.grid()
 		self.create_widgets()
-		# Am I done ?
-		# Fill up whatever is necessary in the function
 
 
 	def __repr__(self):
 		return "The MatchRun class handles the GUI that displays the progress of the match." 
-		# Fill up whatever is necessary in the function
 
 
 	def create_widgets(self):
@@ -1053,61 +1037,12 @@ class MatchRun(Frame, SurvivorSeriesGame):
 			 	  		command = getattr(self, "do_" + self.functions[key])
 			 	  		).grid(row = 6, column = i + 2, columnspan = 3, sticky = W)
 			self.button_set.append(med)
-
-#		self.b1 = Button(
-#					  	self, 
-#					   	text = self.functions[1].upper(), 
-#			 	 		width = 10, 
-#			 	 		padx = 5, 
-#			 	 		command = getattr(self, "do_" + self.functions[1])
-#			 	 		).grid(row = 6, column = 0 + 2, columnspan = 3, sticky = W)
-			
-#		self.b2 = Button(
-#				 		self, 
-#					   	text = self.functions[2].upper(), 
-#			 	 		width = 10, 
-#			 	 		padx = 5, 
-#			 	 		command = getattr(self, "do_" + self.functions[2])
-#			 	 		).grid(row = 6, column = 1 + 2, columnspan = 3, sticky = W)
-			
-#		self.b3 = Button(
-#				 		self, 
-#				  		text = self.functions[3].upper(), 
-#			 	 		width = 10, 
-#			 	 		padx = 5, 
-#				 	 	command = getattr(self, "do_" + self.functions[3])
-#			 	 		).grid(row = 6, column = 2 + 2, columnspan = 3, sticky = W)
-			
-#		self.b4 = Button(
-#				 		self, 
-#				  		text = self.functions[4].upper(), 
-#			 	 		width = 10, 
-#			 	 		padx = 5, 
-#			 	 		command = getattr(self, "do_" + self.functions[4])
-#			 	 		).grid(row = 6, column = 3 + 2, columnspan = 3, sticky = W)
-			
-#		self.b5 = Button(
-#				 		self, 
-#					  	text = self.functions[5].upper(), 
-#			 	 		width = 10, 
-#			 	 		padx = 5, 
-#			 	 		command = getattr(self, "do_" + self.functions[5])
-#			 	 		).grid(row = 6, column = 4 + 2, columnspan = 3, sticky = W)
-			
-#		self.b6 = Button(
-#				 		self, 
-#					  	text = self.functions[6].upper(), 
-#			 	 		width = 10, 
-#			 	 		padx = 5, 
-#			 	 		command = getattr(self, "do_" + self.functions[6])
-#			 	 		).grid(row = 6, column = 5 + 2, columnspan = 3, sticky = W)
 			
 		self.commentary = Text(self, width = 75, height = 50, wrap = WORD)
 		self.commentary.grid(row = 8, column = 2, columnspan = 6, sticky = W)
 
 		self.commentary_start()
 
-	
 		
 """	def move_perform(self, cmd, arg):
 		# Dynamic dispatch function to run when a move is performed.
@@ -1236,9 +1171,6 @@ class WrestlerSelect(Frame):
 				message = "You can now close this window"
 			for i, key in enumerate(wrestlers):
 				self.selection[i].set(False)
-			# Is this fine ? Other options are .destroy(), but .quit() works better
-			# DONE # Get a way to move the team into a list that is outside the class
-			# DONE # Also, set up a flag to signal the completion of team selection, so the next one can start 
 		else:
 			message = "Complete selecting your team before continuing"
 
