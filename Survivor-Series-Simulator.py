@@ -437,6 +437,7 @@ from Tkinter import *
 import random
 import itertools
 from hashlib import md5
+import os
 
 ####################################
 
@@ -510,6 +511,9 @@ class SurvivorSeriesGame(object):
 
 	def filename_setup(self):
 		global final_save_location
+
+		if not final_save_location[:-1] in os.listdir('.'):
+			os.mkdir(final_save_location)
 
 		filename = ""
 		for team_no in {0,1}:
