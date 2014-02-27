@@ -428,7 +428,7 @@ aerial_count = len(aerial_ratings)  # The number of aerial moves
 
 maxlimit = 43.5
 
-final_save_location = ""
+final_save_location = "Match_commentaries/"
 
 
 ####################################################################
@@ -1215,9 +1215,6 @@ def gui_caller_for_game_run():
 # The main function starts the execution of the program
 
 def main():	
-	global final_save_location
-	print '\n\nEnter the file path to save the final commentary text file in : \n'
-	final_save_location = raw_input()
 	gui_caller_for_team_set()
 	gui_caller_for_game_run()
 
