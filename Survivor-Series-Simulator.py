@@ -1195,7 +1195,8 @@ def gui_caller_for_team_set():
 	WS1 = WrestlerSelect(root1, 0)
 
 	root1.mainloop()
-
+#	root1.geometry("0x0")
+	root1.destroy()
 
 ##################
 
