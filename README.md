@@ -16,7 +16,7 @@ I made this while working on Windows, so I'm not sure how well it works with oth
 
 Once you've opened the Survivor-Series-Simulator.py file , a Tkinter window opens, with a list of 125 wrestlers to choose from for your teams. I've allotted a rating for each of them. (Pro-wrestling purists may argue with me about some of the ratings. But my program, my ratings) Pick your team of 5, such that it doesn't exceed the maximum rating total of 43.5.
 
-Once you've picked both your teams, and confirmed them, a new Tkinter window opens for the match run. The team selection window stays open, but idle, in the background. You can close it if you want to.
+Once you've picked both your teams, and confirmed them, a new Tkinter window opens for the match run.
 
 In the match run, use one of the 6 buttons to pick the type of moves. 
 > + Basic
