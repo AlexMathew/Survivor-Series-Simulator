@@ -251,7 +251,7 @@ impact_ratings = {
 				  'Sliced Bread':7.8,
 				  'Sliced Bread #2':8.2,
 				  'Smash Hit':7.7,
-				  'Splat':7.9, 
+				  'Splat!':7.9, 
 				  'Spear':9.6, 
 				  'Spinning Lifting DDT':7.8,
 				  'Starship Pain':9.1,  
